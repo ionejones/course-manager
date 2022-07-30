@@ -1,10 +1,12 @@
-<h2>Course List</h2>
+<!-- <h2>Course List</h2> -->
 
-<div class="form-group row">
-  <label  class="col-sn-2 col-form-label">Filter by :</label>
-  <div class="col-sn-1">
-    <input [(ngModel)]="filter" type="text" class="form-control">
-  </div>
+<div class="form-group containera">
+  <label  class="col-sn-2 col-form-label search">Seahch :</label>
+  <!-- <div class="col-sn-1"> -->
+    <!-- <input [(ngModel)]="filter" type="text" class="form-control"> -->
+    <input class="form-control mr-sm-2 inputSearch" [(ngModel)]="filter" type="search" aria-label="Search" >
+    <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+  <!-- </div> -->
 </div>
 
 <table class="table table-striped">
@@ -30,7 +32,13 @@
           <!-- <td>{{curso.releaseDate | date: 'dd/MM/yyyy'}}</td> -->
           <!-- <td>{{curso.duration}}</td> -->
           <!-- <td><app-star [rating]="curso.rating"></app-star></td> -->
-          <td><a [routerLink]="['/courses/info', curso.id]" class="btn btn-primary mr-2">Edit</a></td>
+          <td> 
+            <div class="btn-group">
+              <a [routerLink]="['/courses/info', curso.id]" class="btn btn-primary mr-2">Detalhes</a>
+              <button type="button" class="btn btn-outline-primary mr-2">Comprar</button>
+            </div>
+          </td>  
+            
         </tr>
     </body>
 

@@ -1,0 +1,14 @@
+.search {
+    max-width: 100px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.containera {
+    display: flex;
+    flex-direction: row;
+}
+
+.inputSearch {
+    max-width: 400px;
+}
