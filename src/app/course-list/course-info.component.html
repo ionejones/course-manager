@@ -1,0 +1,58 @@
+<h2>Curso Info </h2>
+
+<hr>
+
+<form #courseForm="ngForm" *ngIf="course">
+    <div class="form-group row"> 
+         <label  class="col-sn-2 col-form-label">Name :</label>
+        <div class="col-sn-1">
+          <input [(ngModel)]="course.name" required name="name"  #courseName="ngModel"  [ngClass]="{'is-invalid': courseName.invalid}"
+          type="text" class="form-control">
+              <!-- {{courseName.value}} {{courseName.valid}}  -->
+            <div class="invalid-feedback">
+                <span>Favor preencher o nome do curso</span>
+            </div>   
+         </div>
+      </div>
+
+      <div class="form-group row">
+        <label  class="col-sn-2 col-form-label">Price :</label>
+        <div class="col-sn-1">
+          <input [(ngModel)]="course.price" name="price" required #coursePrice="ngModel" type="number" [ngClass]="{'is-invalid': coursePrice.invalid}"
+          type="text" class="form-control">
+               <!-- {{coursePrice.value}} {{coursePrice.valid}} -->
+            <div class="invalid-feedback">
+                <span>Favor preencher o preço</span>
+            </div>   
+         </div>
+      </div>
+
+      <!-- <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Rating:</label>    
+        <div class="col-sn-1">
+            <input [(ngModel)]="course.rating" required name="rating" #courseRating="ngModel" type="number" 
+                [ngClass]="{'is-invalid': courseRating.invalid}" class="form-control">
+            
+            <div class="invalid-feedback">
+                <span>Course rating is required</span>
+            </div>
+        </div>        
+    </div> -->
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Description:</label>    
+        <div class="col-sn-1">
+            <textarea [(ngModel)]="course.description" required name="description" #courseDescription="ngModel" 
+                [ngClass]="{'is-invalid': courseDescription.invalid}" class="form-control"></textarea>
+            
+            <div class="invalid-feedback">
+                <span>Course description is required</span>
+            </div>
+        </div>        
+    </div>
+
+    <button [disabled]="courseForm.invalid" class="btn btn-primary mr-2"  (click)="save()">Save</button>  
+    <button class="btn btn-secondary" [routerLink]="['/courses']">Back</button>
+
+</form>
+
