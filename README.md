@@ -1,6 +1,7 @@
 # Front-end E-COMERCE
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
+Este projeto simula um e-commerce de uma loja de produtos esportivos, juntamente com o projeto () que simula o back-end.
 
-## Development server
+O projeto simula a troca de dados entre o fronte e o back-end, não há persistência de dados nem foram implementadas regras de negócio.
+
 
