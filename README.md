@@ -1,4 +1,4 @@
-# Front-end E-COMERCE
+#  E-COMMERCE de uma loja de produtos esportivos
 
 Este projeto simula um e-commerce de uma loja de produtos esportivos, juntamente com o projeto () que simula o back-end.
 
