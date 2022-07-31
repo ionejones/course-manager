@@ -3,8 +3,6 @@
     <div class="coluna">
         <h2>Detalhes do produto </h2>
         
-        <hr>
-        
         <div class="coluna">
             <div class="linha1">
                 <p>{{course.name}}</p>
@@ -12,6 +10,9 @@
             <div class="linha2">
                 <img class="bd-placeholder-img " width="100" height="100" [src]="course.imageUrl" >
 
+            </div>
+            <div class="linha2">
+                <p>TAMANHO</p>
             </div>
             <div class="tamanhos">
                 <p class="tamanho">35</p>
@@ -24,11 +25,17 @@
             </div>
         </div>
     </div>
-    <div>
+    <div class="coluna">
+    <div class="linha">
+        <p class="preco">R$</p>
         <p class="preco">{{course.price}}</p>
         <!-- <p class="preco">{{course.price | currency:'BRL' }}</p> -->
     </div> 
-</div>   
+    <div>
+        <p class="comprar">COMPRAR</p>
+    </div>
+    </div>
+</div>  
 </body>
 <!-- <form #courseForm="ngForm" *ngIf="course">
     <div class="form-group row"> 

@@ -1,28 +1,35 @@
 <!-- <h2>Course List</h2> -->
-
-<div class="form-group ">
-  <label  class="col-sn-2 col-form-label search">Seahch :</label>
-  <!-- <div class="col-sn-1"> -->
-    <!-- <input [(ngModel)]="filter" type="text" class="form-control"> -->
-    <input class="form-control mr-sm-2 inputSearch" [(ngModel)]="filter" type="search" aria-label="Search" >
-    <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
-  <!-- </div> -->
-</div>
-
-<div *ngFor="let curso of filteredCourses" class="cartoes">
-  <div class="card cartao">
-    <img class="bd-placeholder-img " width="100" height="100" [src]="curso.imageUrl" >
-    <div class="cardbody">
-      <p class="card-text">{{curso.name}}</p>
-      <p class="card-text">{{curso.price}}</p>
+<body>
+  <div class="linha2">
+    <div>
+      <label  class="col-sn-2 col-form-label palavraSearch">Seahch :</label>
     </div>
-    <div class="btn-group botao">
-      <a [routerLink]="['/courses/info', curso.id]" class="btn btn-primary mr-2">Detalhes</a>
-      <button type="button" class="btn btn-outline-primary mr-2">Comprar</button>
+    <!-- <div class="col-sn-1"> -->
+      <!-- <input [(ngModel)]="filter" type="text" class="form-control"> -->
+      <div>  
+        <input class="form-control mr-sm-2 inputSearch" [(ngModel)]="filter" type="search" aria-label="Search" >
+        <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+        <!-- </div> -->
+      </div>
     </div>
+    
+<div class="linha">    
+  <div *ngFor="let curso of filteredCourses" class="cartoes">
+    <div class="card cartao">
+      <img class="bd-placeholder-img " width="100" height="100" [src]="curso.imageUrl" >
+      <div class="cardbody">
+        <p class="card-text">{{curso.name}}</p>
+        <p class="card-text">{{curso.price}}</p>
+      </div>
+      <div class="btn-group botao">
+        <a [routerLink]="['/courses/info', curso.id]" class="btn btn-primary mr-2">Detalhes</a>
+        <button type="button" class="btn btn-outline-primary mr-2">Comprar</button>
+      </div>
 
+    </div>
+  </div>
 </div>
-</div>
+</body>
 <!-- <table class="table table-striped">
     <thead>
       <tr> 
