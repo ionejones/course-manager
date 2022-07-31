@@ -12,3 +12,21 @@
 .inputSearch {
     max-width: 400px;
 }
+
+.cartoes {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin-right: 0;
+    width: 50%;
+}
+
+.cartao {
+    display: flex;
+    border: 0;
+    flex-direction: column;
+}
+
+.botao {
+    width: 50%;
+}

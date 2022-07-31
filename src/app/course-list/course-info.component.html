@@ -1,33 +1,61 @@
-<h2>Curso Info </h2>
+<body>
+<div class="linha">
+    <div class="coluna">
+        <h2>Detalhes do produto </h2>
+        
+        <hr>
+        
+        <div class="coluna">
+            <div class="linha1">
+                <p>{{course.name}}</p>
+            </div>
+            <div class="linha2">
+                <img class="bd-placeholder-img " width="100" height="100" [src]="course.imageUrl" >
 
-<hr>
-
-<form #courseForm="ngForm" *ngIf="course">
+            </div>
+            <div class="tamanhos">
+                <p class="tamanho">35</p>
+                <p class="tamanho">36</p>
+                <p class="tamanho">37</p>
+                <p class="tamanho">38</p>
+                <p class="tamanho">40</p>
+                <p class="tamanho">42</p>
+                <p class="tamanho">44</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <p class="preco">{{course.price}}</p>
+        <!-- <p class="preco">{{course.price | currency:'BRL' }}</p> -->
+    </div> 
+</div>   
+</body>
+<!-- <form #courseForm="ngForm" *ngIf="course">
     <div class="form-group row"> 
          <label  class="col-sn-2 col-form-label">Name :</label>
         <div class="col-sn-1">
           <input [(ngModel)]="course.name" required name="name"  #courseName="ngModel"  [ngClass]="{'is-invalid': courseName.invalid}"
-          type="text" class="form-control">
-              <!-- {{courseName.value}} {{courseName.valid}}  -->
+          type="text" class="form-control"> 
             <div class="invalid-feedback">
                 <span>Favor preencher o nome do curso</span>
             </div>   
          </div>
       </div>
 
+      <div class="cartao">
       <div class="form-group row">
         <label  class="col-sn-2 col-form-label">Price :</label>
         <div class="col-sn-1">
           <input [(ngModel)]="course.price" name="price" required #coursePrice="ngModel" type="number" [ngClass]="{'is-invalid': coursePrice.invalid}"
           type="text" class="form-control">
-               <!-- {{coursePrice.value}} {{coursePrice.valid}} -->
+                {{coursePrice.value}} {{coursePrice.valid}}
             <div class="invalid-feedback">
                 <span>Favor preencher o preço</span>
             </div>   
          </div>
       </div>
-
-      <!-- <div class="form-group row">
+    </div>
+       <div class="form-group row">
         <label class="col-sm-2 col-form-label">Rating:</label>    
         <div class="col-sn-1">
             <input [(ngModel)]="course.rating" required name="rating" #courseRating="ngModel" type="number" 
@@ -37,7 +65,7 @@
                 <span>Course rating is required</span>
             </div>
         </div>        
-    </div> -->
+    </div> 
 
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">Description:</label>    
@@ -55,4 +83,4 @@
     <button class="btn btn-secondary" [routerLink]="['/courses']">Back</button>
 
 </form>
-
+ -->

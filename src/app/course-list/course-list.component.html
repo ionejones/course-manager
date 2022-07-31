@@ -1,6 +1,6 @@
 <!-- <h2>Course List</h2> -->
 
-<div class="form-group containera">
+<div class="form-group ">
   <label  class="col-sn-2 col-form-label search">Seahch :</label>
   <!-- <div class="col-sn-1"> -->
     <!-- <input [(ngModel)]="filter" type="text" class="form-control"> -->
@@ -9,29 +9,39 @@
   <!-- </div> -->
 </div>
 
-<table class="table table-striped">
+<div *ngFor="let curso of filteredCourses" class="cartoes">
+  <div class="card cartao">
+    <img class="bd-placeholder-img " width="100" height="100" [src]="curso.imageUrl" >
+    <div class="cardbody">
+      <p class="card-text">{{curso.name}}</p>
+      <p class="card-text">{{curso.price}}</p>
+    </div>
+    <div class="btn-group botao">
+      <a [routerLink]="['/courses/info', curso.id]" class="btn btn-primary mr-2">Detalhes</a>
+      <button type="button" class="btn btn-outline-primary mr-2">Comprar</button>
+    </div>
+
+</div>
+</div>
+<!-- <table class="table table-striped">
     <thead>
       <tr> 
         <th>Image</th>
         <th>Name</th>
         <th>Price</th>
-        <!-- <th>Code</th>
-        <th>Release Date</th>
-        <th>Duration</th>
-        <th>Rating</th> -->
+        <th>Rating</th>  
         <th>Options</th>
       </tr> 
     </thead>
     <body>
         <tr *ngFor="let curso of filteredCourses">
+
+
+
           <td><img [src]="curso.imageUrl" width="40" height="40"></td>
           <td>{{curso.name}}</td>
           <td>{{curso.price}}</td>
-          <!-- <td>{{curso.code | lowercase }}</td> -->
-          <!-- <td>{{curso.code | lowercase | replace ; '-' ; ' '}}</td> -->
-          <!-- <td>{{curso.releaseDate | date: 'dd/MM/yyyy'}}</td> -->
-          <!-- <td>{{curso.duration}}</td> -->
-          <!-- <td><app-star [rating]="curso.rating"></app-star></td> -->
+           <td><app-star [rating]="curso.rating"></app-star></td> 
           <td> 
             <div class="btn-group">
               <a [routerLink]="['/courses/info', curso.id]" class="btn btn-primary mr-2">Detalhes</a>
@@ -42,4 +52,4 @@
         </tr>
     </body>
 
-</table>
+</table> -->

@@ -6,7 +6,8 @@ import { CourseService } from "./course.service";
 
 @Component({
     selector:'./course-info.component.ts',
-    templateUrl:'./course-info.component.html'
+    templateUrl:'./course-info.component.html',
+    styleUrls: ['./course-info.component.css']
   }) 
 
 export class CourseInfoComponent implements OnInit{
@@ -23,7 +24,12 @@ export class CourseInfoComponent implements OnInit{
 
     this.courseService.retreaveById(+this.activatedRoute.snapshot.paramMap.get('id')).subscribe ({
       next : course => {
-        course = this.course;
+           this.course = course;
+           console.log("Url ",this.course.imageUrl);
+           let varUrl = this.course.imageUrl;
+           let novaUrl = varUrl.replace("png", "jpg");
+           console.log("nova url ",novaUrl);
+           this.course.imageUrl = novaUrl;
       },
       error : err => console.log('Erro na consulta por id : ',err)
         
